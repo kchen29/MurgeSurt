@@ -8,7 +8,7 @@
   <INSERT YOUR EXECUTION TIME CATEGORIZATION OF MERGESORT HERE>
 
   Mean execution times for dataset of size n:
-  Batch size: <# of times each dataset size was run>
+  Batch size: 100,000 times
   n=1       time: 16 nanosecs
   n=10      time: 805 nanosecs
   n=100     time: 95,855 nanosecs
