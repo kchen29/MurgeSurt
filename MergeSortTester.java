@@ -38,6 +38,14 @@ public class MergeSortTester
 	long endTime = System.nanoTime();
 	return endTime - startTime;
     }
+
+    public static long average(int size, int numTimes) {
+	long sum = 0;
+	for (int i = 0; i < numTimes; i++) {
+	    sum += timeTaken(generate(size));
+	}
+	return sum / numTimes;
+    }
     /******************************
      * execution time analysis 
      * <INSERT YOUR DESCRIPTION HERE OF 
@@ -46,11 +54,7 @@ public class MergeSortTester
      ******************************/
     public static void main( String[] args ) 
     {
-	int[] arr7 = {9,42,17,63,0,9,512,23,9,1,86,13,8,4,12};
-	System.out.println("Time taken: " + timeTaken(arr7));
-	for(int i = 0; i < 10; i++){
-	    MergeSort.printArray(generate(10));
-	}
+	System.out.println("Average of size 10, 20 times: " + average(10, 20));
     }//end main
 
 }//end class
