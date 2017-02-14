@@ -8,13 +8,13 @@
   <INSERT YOUR EXECUTION TIME CATEGORIZATION OF MERGESORT HERE>
 
   Mean execution times for dataset of size n:
-  Batch size: 100,000 times
-  n=1       time: 16 nanosecs
-  n=10      time: 805 nanosecs
-  n=100     time: 7,748 nanosecs
-  n=1000    time: 98,542 nanosecs
-  ...
-  n=<huge>  time: 
+  Batch size: 2 000 times
+  n=1       time: 27         nanoseconds
+  n=10      time: 664        nanoseconds
+  n=100     time: 9 915      nanoseconds
+  n=1 000   time: 131 865    nanoseconds
+  n=10 000  time: 1 392 734  nanoseconds
+  n=100 000 time: 15 373 874 nanoseconds
 
   ANALYSIS:
   <INSERT YOUR RESULTS ANALYSIS HERE>
@@ -40,6 +40,7 @@ public class MergeSortTester
 	return endTime - startTime;
     }
 
+    //returns the average time taken for sorting numTimes arrays of length size
     public static long average(int size, int numTimes) {
 	long sum = 0;
 	for (int i = 0; i < numTimes; i++) {
@@ -47,6 +48,7 @@ public class MergeSortTester
 	}
 	return sum / numTimes;
     }
+    
     /******************************
      * execution time analysis 
      * <INSERT YOUR DESCRIPTION HERE OF 
@@ -55,11 +57,13 @@ public class MergeSortTester
      ******************************/
     public static void main( String[] args ) 
     {
-	System.out.println("Average of size 1, 100,000 times: " + average(1, 100000));
-	System.out.println("Average of size 10, 100,000 times: " + average(10, 100000));
-	System.out.println("Average of size 100, 100,000 times: " + average(100, 100000));
-	System.out.println("Average of size 1000, 100,000 times: " + average(1000, 100000));
-	
+        average(100, 100000); //warm up
+	System.out.println("Average of size 1, with 2 000 times: " + average(1, 2000));
+	System.out.println("Average of size 10, with 2 000 times: " + average(10, 2000));
+	System.out.println("Average of size 100, with 2 000 times: " + average(100, 2000));
+	System.out.println("Average of size 1 000, with 2 000 times: " + average(1000, 2000));
+        System.out.println("Average of size 10 000, with 2 000 times: " + average(10000, 2000));
+        System.out.println("Average of size 100 000, with 2 000 times: " + average(100000, 2000));
     }//end main
 
 }//end class
