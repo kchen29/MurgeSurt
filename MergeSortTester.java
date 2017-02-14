@@ -11,7 +11,8 @@
   Batch size: 100,000 times
   n=1       time: 16 nanosecs
   n=10      time: 805 nanosecs
-  n=100     time: 95,855 nanosecs
+  n=100     time: 7,748 nanosecs
+  n=1000    time: 98,542 nanosecs
   ...
   n=<huge>  time: 
 
