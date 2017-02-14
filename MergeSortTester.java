@@ -9,9 +9,9 @@
 
   Mean execution times for dataset of size n:
   Batch size: <# of times each dataset size was run>
-  n=1       time: 
-  n=10      time: 
-  n=100     time: 
+  n=1       time: 16 nanosecs
+  n=10      time: 805 nanosecs
+  n=100     time: 95,855 nanosecs
   ...
   n=<huge>  time: 
 
@@ -54,7 +54,11 @@ public class MergeSortTester
      ******************************/
     public static void main( String[] args ) 
     {
-	System.out.println("Average of size 10, 20 times: " + average(10, 20));
+	System.out.println("Average of size 1, 100,000 times: " + average(1, 100000));
+	System.out.println("Average of size 10, 100,000 times: " + average(10, 100000));
+	System.out.println("Average of size 100, 100,000 times: " + average(100, 100000));
+	System.out.println("Average of size 1000, 100,000 times: " + average(1000, 100000));
+	
     }//end main
 
 }//end class
