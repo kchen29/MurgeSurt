@@ -22,6 +22,13 @@
 public class MergeSortTester 
 {
 
+    //returns time taken to sort the array
+    public static long timeTaken(int[] arr) {
+	long startTime = System.currentTimeMillis();
+	MergeSort.sort(arr);
+	long endTime = System.currentTimeMillis();
+	return endTime - startTime;
+    }
     /******************************
      * execution time analysis 
      * <INSERT YOUR DESCRIPTION HERE OF 
@@ -30,7 +37,8 @@ public class MergeSortTester
      ******************************/
     public static void main( String[] args ) 
     {
-
+	int[] arr7 = {9,42,17,63,0,9,512,23,9, 1, 86, 13, 8, 4, 12};
+	System.out.println("Time taken: " + timeTaken(arr7));
     }//end main
 
 }//end class
