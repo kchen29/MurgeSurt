@@ -13,7 +13,9 @@
   n=10      time: 664        nanoseconds
   n=100     time: 9 915      nanoseconds
   n=1 000   time: 131 865    nanoseconds
+  n=5 000   time: 681 728    nanoseconds
   n=10 000  time: 1 392 734  nanoseconds
+  n=50 000  time: 7 541 120  nanoseconds
   n=100 000 time: 15 373 874 nanoseconds
 
   ANALYSIS:
@@ -62,7 +64,9 @@ public class MergeSortTester
 	System.out.println("Average of size 10, with 2 000 times: " + average(10, 2000));
 	System.out.println("Average of size 100, with 2 000 times: " + average(100, 2000));
 	System.out.println("Average of size 1 000, with 2 000 times: " + average(1000, 2000));
+        System.out.println("Average of size 5 000, with 2 000 times: " + average(5000, 2000));
         System.out.println("Average of size 10 000, with 2 000 times: " + average(10000, 2000));
+        System.out.println("Average of size 50 000, with 2 000 times: " + average(50000, 2000));
         System.out.println("Average of size 100 000, with 2 000 times: " + average(100000, 2000));
     }//end main
 
