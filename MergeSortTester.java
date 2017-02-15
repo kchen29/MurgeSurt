@@ -2,10 +2,10 @@
   class MergeSortTester
 
   ALGORITHM:
-  <INSERT YOUR DISTILLATION OF ALGO HERE>
+  Calculates the time it takes for mergesort to run on arrays of different sizes. Using nano seconds to measure sorts. 
 
   BIG-OH CLASSIFICATION OF ALGORITHM:
-  <INSERT YOUR EXECUTION TIME CATEGORIZATION OF MERGESORT HERE>
+  O( nLog(n) ) ??? 
 
   Mean execution times for dataset of size n:
   Batch size: 2 000 times
@@ -53,9 +53,10 @@ public class MergeSortTester
     
     /******************************
      * execution time analysis 
-     * <INSERT YOUR DESCRIPTION HERE OF 
-     *  YOUR APPARATUS FOR GENERATING EXECUTION 
-     *  TIME DATA...>
+     * the average function takes in the size of the array and the batch size.
+     * First we run the average 100000 times to avoid outliers in runtime.
+     * Timetaken calcuates the time it takes for a sort to occur. 
+     * Average out the timetaken for each sort by batch size
      ******************************/
     public static void main( String[] args ) 
     {
@@ -71,3 +72,4 @@ public class MergeSortTester
     }//end main
 
 }//end class
+
