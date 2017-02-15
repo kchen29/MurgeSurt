@@ -1,11 +1,17 @@
+//Team MurgeSurt (Kenny Chen, Jasper Cheung, and Grace Cuenca)
+//APCS2 pd1
+// HW07 -- What Does the Data Say
+//2017-02-14
+
 /*======================================
   class MergeSortTester
 
   ALGORITHM:
   Calculates the time it takes for mergesort to run on arrays of different sizes. Using nano seconds to measure sorts. 
+  Original MergeSort Algorithm works by invoking recursion to split a given array into smaller arrays until each array is of size one. Once that is accomplished, each array is merged back together with each successive elemnt being added being sorted along the way.
 
   BIG-OH CLASSIFICATION OF ALGORITHM:
-  O( nLog(n) ) ??? 
+  O(nlog(n))
 
   Mean execution times for dataset of size n:
   Batch size: 2 000 times
@@ -17,9 +23,18 @@
   n=10 000  time: 1 392 734  nanoseconds
   n=50 000  time: 7 541 120  nanoseconds
   n=100 000 time: 15 373 874 nanoseconds
+  ...
+  n=<huge>  time: huge*(log(huge)) nanoseconds
+
 
   ANALYSIS:
-  <INSERT YOUR RESULTS ANALYSIS HERE>
+  Merge sorting takes into account two functions: merge() and sort(). However, the essential steps of this process
+  are splitting the array until n arrays of length one are formed, joining subarrays, and sorting them. Dividing each array
+  will have a runtime of O(1) because the process simply finds the middle index of an array. After the array is iterated through,
+  there will be n number of arrays of length, 1. If we have an array of 16 elements, there will be 4 (log base 2 16) halvings, creating 4 levels.
+  On each of these levels, merge() has a runtime of O(n) because there are more merges to be made, but on a smaller scale. These
+  O(n) merges are conducted log base 2 n times, resulting in a runtime of n(log base 2 n), resulting in a final runtime of
+  O(nlogn).
   ======================================*/
 
 public class MergeSortTester 
