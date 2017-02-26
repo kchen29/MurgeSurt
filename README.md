@@ -5,6 +5,7 @@
 
 In order to gather empiracal data, we gathered ran our mergesort algorithm 1000 times, averaged the time results, and continuously made the array size bigger.
 
+[Findings] (https://docs.google.com/document/d/1I5koKd86lb7m7-4GEGAucyy9wKyIkQzNJMgynIggjf4/pub)
 
 Merge sorting takes into account two functions: merge() and sort(). However, the essential steps of this process
 are splitting the array until n arrays of length one are formed, joining subarrays, and sorting them. Dividing each array
